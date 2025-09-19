@@ -1,90 +1,88 @@
-]11;?\[6n[92m    ✓ [0mSBOM of image already cached, 103 packages indexed
-[91m    ✗ [0mDetected 9 vulnerable packages with a total of 19 vulnerabilities
-]11;?\[6n
 
-[1m[34m## Overview[0m[0m
 
-                    │       [1mAnalyzed Image[0m         
+## Overview
+
+                    │       Analyzed Image         
 ────────────────────┼──────────────────────────────
-  Target            │ [38;5;203;48;5;236m chatapp-chatapp:latest [0m     
-    digest          │ [38;5;203;48;5;236m 7e75af0b242e [0m               
+  Target            │  chatapp-chatapp:latest      
+    digest          │  7e75af0b242e                
     platform        │ linux/amd64                  
-    vulnerabilities │ [37;48;5;88m   1C [0m [30;48;5;167m   8H [0m [30;48;5;215m   6M [0m [30;48;5;222m   4L [0m  
+    vulnerabilities │    1C     8H     6M     4L   
     size            │ 130 MB                       
     packages        │ 103                          
 
 
-[1m[34m## Packages and Vulnerabilities[0m[0m
+## Packages and Vulnerabilities
 
-[37;48;5;88m   1C [0m [30;48;5;167m   4H [0m [30;48;5;215m   2M [0m [30;48;5;222m   2L [0m [1morg.apache.tomcat.embed/tomcat-embed-core 10.1.33[0m
+   1C     4H     2M     2L  org.apache.tomcat.embed/tomcat-embed-core 10.1.33
 pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@10.1.33
 
-    [38;5;88m✗ CRITICAL[0m CVE-2025-24813 [37;48;5;88m CISA KEV [0m[2m [Path Equivalence: 'file.name' (Internal Dot)][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-24813?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C10.1.35\https://scout.docker.com/v/CVE-2025-24813]8;;\
+    ✗ CRITICAL CVE-2025-24813  CISA KEV  [Path Equivalence: 'file.name' (Internal Dot)]
+      https://scout.docker.com/v/CVE-2025-24813?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C10.1.35
       Affected range : >=10.1.0-M1                                                      
                      : <10.1.35                                                         
       Fixed version  : 10.1.35                                                          
       CVSS Score     : 9.2                                                              
       CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N  
     
-    [38;5;167m✗ HIGH[0m CVE-2025-48988[2m [Allocation of Resources Without Limits or Throttling][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-48988?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C%3D10.1.41\https://scout.docker.com/v/CVE-2025-48988]8;;\
+    ✗ HIGH CVE-2025-48988 [Allocation of Resources Without Limits or Throttling]
+      https://scout.docker.com/v/CVE-2025-48988?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C%3D10.1.41
       Affected range : >=10.1.0-M1                                                      
                      : <=10.1.41                                                        
       Fixed version  : 10.1.42                                                          
       CVSS Score     : 8.7                                                              
       CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N  
     
-    [38;5;167m✗ HIGH[0m CVE-2025-48989[2m [Improper Resource Shutdown or Release][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-48989?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C10.1.44\https://scout.docker.com/v/CVE-2025-48989]8;;\
+    ✗ HIGH CVE-2025-48989 [Improper Resource Shutdown or Release]
+      https://scout.docker.com/v/CVE-2025-48989?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C10.1.44
       Affected range : >=10.1.0-M1                                   
                      : <10.1.44                                      
       Fixed version  : 10.1.44                                       
       CVSS Score     : 7.5                                           
       CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H  
     
-    [38;5;167m✗ HIGH[0m CVE-2024-56337[2m [Time-of-check Time-of-use (TOCTOU) Race Condition][0m
-      ]8;;https://scout.docker.com/v/CVE-2024-56337?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C10.1.34\https://scout.docker.com/v/CVE-2024-56337]8;;\
+    ✗ HIGH CVE-2024-56337 [Time-of-check Time-of-use (TOCTOU) Race Condition]
+      https://scout.docker.com/v/CVE-2024-56337?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C10.1.34
       Affected range : >=10.1.0-M1                                                          
                      : <10.1.34                                                             
       Fixed version  : 10.1.34                                                              
       CVSS Score     : 7.2                                                                  
       CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U  
     
-    [38;5;167m✗ HIGH[0m CVE-2024-50379[2m [Time-of-check Time-of-use (TOCTOU) Race Condition][0m
-      ]8;;https://scout.docker.com/v/CVE-2024-50379?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C10.1.34\https://scout.docker.com/v/CVE-2024-50379]8;;\
+    ✗ HIGH CVE-2024-50379 [Time-of-check Time-of-use (TOCTOU) Race Condition]
+      https://scout.docker.com/v/CVE-2024-50379?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C10.1.34
       Affected range : >=10.1.0-M1                                                          
                      : <10.1.34                                                             
       Fixed version  : 10.1.34                                                              
       CVSS Score     : 7.2                                                                  
       CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:U  
     
-    [38;5;215m✗ MEDIUM[0m CVE-2025-31650[2m [Incomplete Cleanup][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-31650?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.10%2C%3C10.1.40\https://scout.docker.com/v/CVE-2025-31650]8;;\
+    ✗ MEDIUM CVE-2025-31650 [Incomplete Cleanup]
+      https://scout.docker.com/v/CVE-2025-31650?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.10%2C%3C10.1.40
       Affected range : >=10.1.10                                                            
                      : <10.1.40                                                             
       Fixed version  : 10.1.40                                                              
       CVSS Score     : 6.6                                                                  
       CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:U  
     
-    [38;5;215m✗ MEDIUM[0m CVE-2025-49125[2m [Authentication Bypass Using an Alternate Path or Channel][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-49125?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C%3D10.1.41\https://scout.docker.com/v/CVE-2025-49125]8;;\
+    ✗ MEDIUM CVE-2025-49125 [Authentication Bypass Using an Alternate Path or Channel]
+      https://scout.docker.com/v/CVE-2025-49125?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C%3D10.1.41
       Affected range : >=10.1.0-M1                                                      
                      : <=10.1.41                                                        
       Fixed version  : 10.1.42                                                          
       CVSS Score     : 6.3                                                              
       CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N  
     
-    [38;5;222m✗ LOW[0m CVE-2025-31651[2m [Improper Encoding or Escaping of Output][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-31651?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.10%2C%3C10.1.40\https://scout.docker.com/v/CVE-2025-31651]8;;\
+    ✗ LOW CVE-2025-31651 [Improper Encoding or Escaping of Output]
+      https://scout.docker.com/v/CVE-2025-31651?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.10%2C%3C10.1.40
       Affected range : >=10.1.10                                                            
                      : <10.1.40                                                             
       Fixed version  : 10.1.40                                                              
       CVSS Score     : 2.7                                                                  
       CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:U  
     
-    [38;5;222m✗ LOW[0m CVE-2025-46701[2m [Improper Handling of Case Sensitivity][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-46701?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C10.1.41\https://scout.docker.com/v/CVE-2025-46701]8;;\
+    ✗ LOW CVE-2025-46701 [Improper Handling of Case Sensitivity]
+      https://scout.docker.com/v/CVE-2025-46701?s=github&n=tomcat-embed-core&ns=org.apache.tomcat.embed&t=maven&vr=%3E%3D10.1.0-M1%2C%3C10.1.41
       Affected range : >=10.1.0-M1                                                                  
                      : <10.1.41                                                                     
       Fixed version  : 10.1.41                                                                      
@@ -92,19 +90,19 @@ pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@10.1.33
       CVSS Vector    : CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:U/U:Clear  
     
 
-[30;48;5;239m   0C [0m [30;48;5;167m   1H [0m [30;48;5;215m   1M [0m [30;48;5;239m   0L [0m [1morg.springframework.security/spring-security-core 6.4.1[0m
+   0C     1H     1M     0L  org.springframework.security/spring-security-core 6.4.1
 pkg:maven/org.springframework.security/spring-security-core@6.4.1
 
-    [38;5;167m✗ HIGH[0m CVE-2025-41248[2m [Authentication Bypass by Alternate Name][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-41248?s=github&n=spring-security-core&ns=org.springframework.security&t=maven&vr=%3E%3D6.4.0%2C%3C6.4.10\https://scout.docker.com/v/CVE-2025-41248]8;;\
+    ✗ HIGH CVE-2025-41248 [Authentication Bypass by Alternate Name]
+      https://scout.docker.com/v/CVE-2025-41248?s=github&n=spring-security-core&ns=org.springframework.security&t=maven&vr=%3E%3D6.4.0%2C%3C6.4.10
       Affected range : >=6.4.0                                       
                      : <6.4.10                                       
       Fixed version  : 6.4.10                                        
       CVSS Score     : 7.5                                           
       CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N  
     
-    [38;5;215m✗ MEDIUM[0m CVE-2025-22223[2m [Authentication Bypass by Spoofing][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-22223?s=github&n=spring-security-core&ns=org.springframework.security&t=maven&vr=%3E%3D6.4.0%2C%3C6.4.4\https://scout.docker.com/v/CVE-2025-22223]8;;\
+    ✗ MEDIUM CVE-2025-22223 [Authentication Bypass by Spoofing]
+      https://scout.docker.com/v/CVE-2025-22223?s=github&n=spring-security-core&ns=org.springframework.security&t=maven&vr=%3E%3D6.4.0%2C%3C6.4.4
       Affected range : >=6.4.0                                       
                      : <6.4.4                                        
       Fixed version  : 6.4.4                                         
@@ -112,11 +110,11 @@ pkg:maven/org.springframework.security/spring-security-core@6.4.1
       CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N  
     
 
-[30;48;5;239m   0C [0m [30;48;5;167m   1H [0m [30;48;5;239m   0M [0m [30;48;5;239m   0L [0m [1morg.springframework.boot/spring-boot 3.4.0[0m
+   0C     1H     0M     0L  org.springframework.boot/spring-boot 3.4.0
 pkg:maven/org.springframework.boot/spring-boot@3.4.0
 
-    [38;5;167m✗ HIGH[0m CVE-2025-22235[2m [Improper Input Validation][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-22235?s=github&n=spring-boot&ns=org.springframework.boot&t=maven&vr=%3E%3D3.4.0%2C%3C%3D3.4.4\https://scout.docker.com/v/CVE-2025-22235]8;;\
+    ✗ HIGH CVE-2025-22235 [Improper Input Validation]
+      https://scout.docker.com/v/CVE-2025-22235?s=github&n=spring-boot&ns=org.springframework.boot&t=maven&vr=%3E%3D3.4.0%2C%3C%3D3.4.4
       Affected range : >=3.4.0                                       
                      : <=3.4.4                                       
       Fixed version  : 3.4.5                                         
@@ -124,11 +122,11 @@ pkg:maven/org.springframework.boot/spring-boot@3.4.0
       CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L  
     
 
-[30;48;5;239m   0C [0m [30;48;5;167m   1H [0m [30;48;5;239m   0M [0m [30;48;5;239m   0L [0m [1morg.springframework/spring-core 6.2.0[0m
+   0C     1H     0M     0L  org.springframework/spring-core 6.2.0
 pkg:maven/org.springframework/spring-core@6.2.0
 
-    [38;5;167m✗ HIGH[0m CVE-2025-41249[2m [Improper Authorization][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-41249?s=github&n=spring-core&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C%3D6.2.10\https://scout.docker.com/v/CVE-2025-41249]8;;\
+    ✗ HIGH CVE-2025-41249 [Improper Authorization]
+      https://scout.docker.com/v/CVE-2025-41249?s=github&n=spring-core&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C%3D6.2.10
       Affected range : >=6.2.0                                       
                      : <=6.2.10                                      
       Fixed version  : 6.2.11                                        
@@ -136,11 +134,11 @@ pkg:maven/org.springframework/spring-core@6.2.0
       CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N  
     
 
-[30;48;5;239m   0C [0m [30;48;5;167m   1H [0m [30;48;5;239m   0M [0m [30;48;5;239m   0L [0m [1morg.springframework.security/spring-security-crypto 6.4.1[0m
+   0C     1H     0M     0L  org.springframework.security/spring-security-crypto 6.4.1
 pkg:maven/org.springframework.security/spring-security-crypto@6.4.1
 
-    [38;5;167m✗ HIGH[0m CVE-2025-22228[2m [Improper Authentication][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-22228?s=github&n=spring-security-crypto&ns=org.springframework.security&t=maven&vr=%3E%3D6.4.0%2C%3C6.4.4\https://scout.docker.com/v/CVE-2025-22228]8;;\
+    ✗ HIGH CVE-2025-22228 [Improper Authentication]
+      https://scout.docker.com/v/CVE-2025-22228?s=github&n=spring-security-crypto&ns=org.springframework.security&t=maven&vr=%3E%3D6.4.0%2C%3C6.4.4
       Affected range : >=6.4.0                                       
                      : <6.4.4                                        
       Fixed version  : 6.4.4                                         
@@ -148,19 +146,19 @@ pkg:maven/org.springframework.security/spring-security-crypto@6.4.1
       CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N  
     
 
-[30;48;5;239m   0C [0m [30;48;5;239m   0H [0m [30;48;5;215m   1M [0m [30;48;5;222m   1L [0m [1mch.qos.logback/logback-core 1.5.12[0m
+   0C     0H     1M     1L  ch.qos.logback/logback-core 1.5.12
 pkg:maven/ch.qos.logback/logback-core@1.5.12
 
-    [38;5;215m✗ MEDIUM[0m CVE-2024-12798[2m [Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')][0m
-      ]8;;https://scout.docker.com/v/CVE-2024-12798?s=github&n=logback-core&ns=ch.qos.logback&t=maven&vr=%3E%3D1.4.0%2C%3C1.5.13\https://scout.docker.com/v/CVE-2024-12798]8;;\
+    ✗ MEDIUM CVE-2024-12798 [Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')]
+      https://scout.docker.com/v/CVE-2024-12798?s=github&n=logback-core&ns=ch.qos.logback&t=maven&vr=%3E%3D1.4.0%2C%3C1.5.13
       Affected range : >=1.4.0                                                                       
                      : <1.5.13                                                                       
       Fixed version  : 1.5.13                                                                        
       CVSS Score     : 5.9                                                                           
       CVSS Vector    : CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:H/VA:L/SC:L/SI:H/SA:L/RE:L/U:Clear  
     
-    [38;5;222m✗ LOW[0m CVE-2024-12801[2m [Server-Side Request Forgery (SSRF)][0m
-      ]8;;https://scout.docker.com/v/CVE-2024-12801?s=github&n=logback-core&ns=ch.qos.logback&t=maven&vr=%3E%3D1.4.0%2C%3C1.5.13\https://scout.docker.com/v/CVE-2024-12801]8;;\
+    ✗ LOW CVE-2024-12801 [Server-Side Request Forgery (SSRF)]
+      https://scout.docker.com/v/CVE-2024-12801?s=github&n=logback-core&ns=ch.qos.logback&t=maven&vr=%3E%3D1.4.0%2C%3C1.5.13
       Affected range : >=1.4.0                                                                      
                      : <1.5.13                                                                      
       Fixed version  : 1.5.13                                                                       
@@ -168,11 +166,11 @@ pkg:maven/ch.qos.logback/logback-core@1.5.12
       CVSS Vector    : CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:N/VA:L/SC:H/SI:H/SA:H/V:D/U:Clear  
     
 
-[30;48;5;239m   0C [0m [30;48;5;239m   0H [0m [30;48;5;215m   1M [0m [30;48;5;239m   0L [0m [1morg.springframework/spring-web 6.2.0[0m
+   0C     0H     1M     0L  org.springframework/spring-web 6.2.0
 pkg:maven/org.springframework/spring-web@6.2.0
 
-    [38;5;215m✗ MEDIUM[0m CVE-2025-41234[2m [Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-41234?s=github&n=spring-web&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C6.2.8\https://scout.docker.com/v/CVE-2025-41234]8;;\
+    ✗ MEDIUM CVE-2025-41234 [Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')]
+      https://scout.docker.com/v/CVE-2025-41234?s=github&n=spring-web&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C6.2.8
       Affected range : >=6.2.0                                       
                      : <6.2.8                                        
       Fixed version  : 6.2.8                                         
@@ -180,11 +178,11 @@ pkg:maven/org.springframework/spring-web@6.2.0
       CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:N  
     
 
-[30;48;5;239m   0C [0m [30;48;5;239m   0H [0m [30;48;5;215m   1M [0m [30;48;5;239m   0L [0m [1morg.springframework/spring-webmvc 6.2.0[0m
+   0C     0H     1M     0L  org.springframework/spring-webmvc 6.2.0
 pkg:maven/org.springframework/spring-webmvc@6.2.0
 
-    [38;5;215m✗ MEDIUM[0m CVE-2025-41242[2m [Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-41242?s=github&n=spring-webmvc&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C6.2.10\https://scout.docker.com/v/CVE-2025-41242]8;;\
+    ✗ MEDIUM CVE-2025-41242 [Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')]
+      https://scout.docker.com/v/CVE-2025-41242?s=github&n=spring-webmvc&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C6.2.10
       Affected range : >=6.2.0                                       
                      : <6.2.10                                       
       Fixed version  : 6.2.10                                        
@@ -192,11 +190,11 @@ pkg:maven/org.springframework/spring-webmvc@6.2.0
       CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N  
     
 
-[30;48;5;239m   0C [0m [30;48;5;239m   0H [0m [30;48;5;239m   0M [0m [30;48;5;222m   1L [0m [1morg.springframework/spring-context 6.2.0[0m
+   0C     0H     0M     1L  org.springframework/spring-context 6.2.0
 pkg:maven/org.springframework/spring-context@6.2.0
 
-    [38;5;222m✗ LOW[0m CVE-2025-22233[2m [Improper Input Validation][0m
-      ]8;;https://scout.docker.com/v/CVE-2025-22233?s=github&n=spring-context&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C%3D6.2.6\https://scout.docker.com/v/CVE-2025-22233]8;;\
+    ✗ LOW CVE-2025-22233 [Improper Input Validation]
+      https://scout.docker.com/v/CVE-2025-22233?s=github&n=spring-context&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C%3D6.2.6
       Affected range : >=6.2.0                                       
                      : <=6.2.6                                       
       Fixed version  : 6.2.7                                         
@@ -205,13 +203,9 @@ pkg:maven/org.springframework/spring-context@6.2.0
     
 
 
-[1m19 vulnerabilities found in 9 packages[0m
-  [37;48;5;88mCRITICAL[0m  [38;5;88m1[0m  
-  [30;48;5;167mHIGH[0m      [38;5;167m8[0m  
-  [30;48;5;215mMEDIUM[0m    [38;5;215m6[0m  
-  [30;48;5;222mLOW[0m       [38;5;222m4[0m  
-
-
-[1mWhat's next:[0m
-    View base image update recommendations → [36mdocker scout recommendations chatapp-chatapp:latest[0m
+19 vulnerabilities found in 9 packages
+  CRITICAL  1  
+  HIGH      8  
+  MEDIUM    6  
+  LOW       4  
 
