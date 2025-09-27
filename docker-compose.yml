@@ -1,7 +1,6 @@
 services:
   chatapp:
-    build:
-      context: .
+    image: mrsinghdocker/chatapp:jenkins
     container_name: frontend_chatapp
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://backend_database:3306/chatapp?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
