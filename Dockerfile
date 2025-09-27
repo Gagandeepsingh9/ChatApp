@@ -1,4 +1,4 @@
-FROM maven:3.9 AS stage1
+FROM maven:3.9.11-amazoncorretto-17-al2023 AS stage1
 
 WORKDIR /myapp
 
