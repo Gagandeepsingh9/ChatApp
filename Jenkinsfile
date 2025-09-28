@@ -1,9 +1,10 @@
+@Library("cicd_shared_library") _
 pipeline{
     agent {label "dev-node1"}
     stages{
         stage("clone"){
             steps{
-                git url: "https://github.com/Gagandeepsingh9/ChatApp.git", branch: "week6-CICD"
+                cloning("https://github.com/Gagandeepsingh9/ChatApp.git","week6-CICD")
             }
         }
         stage("build"){
