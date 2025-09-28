@@ -26,7 +26,7 @@ services:
     networks:
       - chatapp_net
     volumes:
-      - chatapp_vol:/var/lib/mysql
+      - chatapp_volume:/var/lib/mysql
     ports:
       - 3306:3306
     healthcheck:
@@ -41,4 +41,4 @@ networks:
   chatapp_net:
 
 volumes:
-  chatapp_vol:
+  chatapp_volume:
