@@ -4,28 +4,29 @@ pipeline{
     stages{
         stage("clone"){
             steps{
+                script{
                 cloning("https://github.com/Gagandeepsingh9/ChatApp.git","week6-CICD")
+                }
             }
         }
         stage("build"){
             steps{
-                sh "docker build -t mrsinghdocker/chatapp:jenkins ."
+                script{
+                building("mrsinghdocker","chatapp:jenkins")
+                }
             }
         }
         stage("test"){
             steps{
-                sh "trivy image mrsinghdocker/chatapp:jenkins -o image_scan.json"
+                script{
+                testing("mrsinghdocker","chatapp:jenkins")
+                }
             }
         }
         stage("push"){
             steps{
-                withCredentials([usernamePassword(
-                    credentialsId: "MY_DOCKER_CREDS",
-                    usernameVariable: "DOCKER_USER",
-                    passwordVariable: "DOCKER_PASS"
-                    )]){
-                sh "echo ${env.DOCKER_PASS} | docker login -u ${env.DOCKER_USER} --password-stdin"
-                sh "docker push ${env.DOCKER_USER}/chatapp:jenkins"
+                script{
+                    docker_push("MY_DOCKER_CREDS","chatapp:jenkins")
                 }
             }
         }
