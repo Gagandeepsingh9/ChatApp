@@ -16,7 +16,7 @@ services:
         condition: service_healthy
 
   database:
-    image: mysql:latest
+    image: mysql:8.0-debian
     container_name: backend_database
     environment:
       MYSQL_ROOT_PASSWORD: root
