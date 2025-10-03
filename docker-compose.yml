@@ -1,0 +1,44 @@
+services:
+  chatapp:
+    image: mrsinghdocker/chatapp:jenkins
+    container_name: frontend_chatapp
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://backend_database:3306/chatapp?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: adminpass
+    networks:
+      - chatapp_net
+    ports:
+      - 8080:8080
+    restart: always
+    depends_on:
+      database:
+        condition: service_healthy
+
+  database:
+    image: mysql:latest
+    container_name: backend_database
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: chatapp
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: adminpass
+    networks:
+      - chatapp_net
+    volumes:
+      - chatapp_volume:/var/lib/mysql
+    ports:
+      - 3306:3306
+    healthcheck:
+      test: ["CMD","mysqladmin","ping","-h","localhost"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 20s
+    restart: always
+
+networks:
+  chatapp_net:
+
+volumes:
+  chatapp_volume:

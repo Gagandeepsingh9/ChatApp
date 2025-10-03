@@ -1,0 +1,135 @@
+
+
+## Overview
+
+                    │       Analyzed Image         
+────────────────────┼──────────────────────────────
+  Target            │  chatapp-chatapp:latest      
+    digest          │  138d6a29259b                
+    platform        │ linux/amd64                  
+    vulnerabilities │    0C     4H     4M     2L   
+    size            │ 130 MB                       
+    packages        │ 103                          
+
+
+## Packages and Vulnerabilities
+
+   0C     1H     1M     0L  org.springframework.security/spring-security-core 6.4.1
+pkg:maven/org.springframework.security/spring-security-core@6.4.1
+
+    ✗ HIGH CVE-2025-41248 [Authentication Bypass by Alternate Name]
+      https://scout.docker.com/v/CVE-2025-41248?s=github&n=spring-security-core&ns=org.springframework.security&t=maven&vr=%3E%3D6.4.0%2C%3C6.4.10
+      Affected range : >=6.4.0                                       
+                     : <6.4.10                                       
+      Fixed version  : 6.4.10                                        
+      CVSS Score     : 7.5                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N  
+    
+    ✗ MEDIUM CVE-2025-22223 [Authentication Bypass by Spoofing]
+      https://scout.docker.com/v/CVE-2025-22223?s=github&n=spring-security-core&ns=org.springframework.security&t=maven&vr=%3E%3D6.4.0%2C%3C6.4.4
+      Affected range : >=6.4.0                                       
+                     : <6.4.4                                        
+      Fixed version  : 6.4.4                                         
+      CVSS Score     : 5.3                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N  
+    
+
+   0C     1H     0M     0L  org.springframework/spring-core 6.2.0
+pkg:maven/org.springframework/spring-core@6.2.0
+
+    ✗ HIGH CVE-2025-41249 [Improper Authorization]
+      https://scout.docker.com/v/CVE-2025-41249?s=github&n=spring-core&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C%3D6.2.10
+      Affected range : >=6.2.0                                       
+                     : <=6.2.10                                      
+      Fixed version  : 6.2.11                                        
+      CVSS Score     : 7.5                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N  
+    
+
+   0C     1H     0M     0L  org.springframework.boot/spring-boot 3.4.0
+pkg:maven/org.springframework.boot/spring-boot@3.4.0
+
+    ✗ HIGH CVE-2025-22235 [Improper Input Validation]
+      https://scout.docker.com/v/CVE-2025-22235?s=github&n=spring-boot&ns=org.springframework.boot&t=maven&vr=%3E%3D3.4.0%2C%3C%3D3.4.4
+      Affected range : >=3.4.0                                       
+                     : <=3.4.4                                       
+      Fixed version  : 3.4.5                                         
+      CVSS Score     : 7.3                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L  
+    
+
+   0C     1H     0M     0L  org.springframework.security/spring-security-crypto 6.4.1
+pkg:maven/org.springframework.security/spring-security-crypto@6.4.1
+
+    ✗ HIGH CVE-2025-22228 [Improper Authentication]
+      https://scout.docker.com/v/CVE-2025-22228?s=github&n=spring-security-crypto&ns=org.springframework.security&t=maven&vr=%3E%3D6.4.0%2C%3C6.4.4
+      Affected range : >=6.4.0                                       
+                     : <6.4.4                                        
+      Fixed version  : 6.4.4                                         
+      CVSS Score     : 7.4                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N  
+    
+
+   0C     0H     1M     1L  ch.qos.logback/logback-core 1.5.12
+pkg:maven/ch.qos.logback/logback-core@1.5.12
+
+    ✗ MEDIUM CVE-2024-12798 [Improper Neutralization of Special Elements used in an Expression Language Statement ('Expression Language Injection')]
+      https://scout.docker.com/v/CVE-2024-12798?s=github&n=logback-core&ns=ch.qos.logback&t=maven&vr=%3E%3D1.4.0%2C%3C1.5.13
+      Affected range : >=1.4.0                                                                       
+                     : <1.5.13                                                                       
+      Fixed version  : 1.5.13                                                                        
+      CVSS Score     : 5.9                                                                           
+      CVSS Vector    : CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:H/VA:L/SC:L/SI:H/SA:L/RE:L/U:Clear  
+    
+    ✗ LOW CVE-2024-12801 [Server-Side Request Forgery (SSRF)]
+      https://scout.docker.com/v/CVE-2024-12801?s=github&n=logback-core&ns=ch.qos.logback&t=maven&vr=%3E%3D1.4.0%2C%3C1.5.13
+      Affected range : >=1.4.0                                                                      
+                     : <1.5.13                                                                      
+      Fixed version  : 1.5.13                                                                       
+      CVSS Score     : 2.4                                                                          
+      CVSS Vector    : CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:L/VI:N/VA:L/SC:H/SI:H/SA:H/V:D/U:Clear  
+    
+
+   0C     0H     1M     0L  org.springframework/spring-webmvc 6.2.0
+pkg:maven/org.springframework/spring-webmvc@6.2.0
+
+    ✗ MEDIUM CVE-2025-41242 [Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')]
+      https://scout.docker.com/v/CVE-2025-41242?s=github&n=spring-webmvc&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C6.2.10
+      Affected range : >=6.2.0                                       
+                     : <6.2.10                                       
+      Fixed version  : 6.2.10                                        
+      CVSS Score     : 5.9                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N  
+    
+
+   0C     0H     1M     0L  org.springframework/spring-web 6.2.0
+pkg:maven/org.springframework/spring-web@6.2.0
+
+    ✗ MEDIUM CVE-2025-41234 [Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting')]
+      https://scout.docker.com/v/CVE-2025-41234?s=github&n=spring-web&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C6.2.8
+      Affected range : >=6.2.0                                       
+                     : <6.2.8                                        
+      Fixed version  : 6.2.8                                         
+      CVSS Score     : 6.5                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:N  
+    
+
+   0C     0H     0M     1L  org.springframework/spring-context 6.2.0
+pkg:maven/org.springframework/spring-context@6.2.0
+
+    ✗ LOW CVE-2025-22233 [Improper Input Validation]
+      https://scout.docker.com/v/CVE-2025-22233?s=github&n=spring-context&ns=org.springframework&t=maven&vr=%3E%3D6.2.0%2C%3C%3D6.2.6
+      Affected range : >=6.2.0                                       
+                     : <=6.2.6                                       
+      Fixed version  : 6.2.7                                         
+      CVSS Score     : 3.1                                           
+      CVSS Vector    : CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N  
+    
+
+
+10 vulnerabilities found in 8 packages
+  CRITICAL  0  
+  HIGH      4  
+  MEDIUM    4  
+  LOW       2  
+
