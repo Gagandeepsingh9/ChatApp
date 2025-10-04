@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+
+metadata:
+  name: chatapp-svc
+  namespace: chatapp
+
+spec:
+  selector:
+    app: chatapp
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080

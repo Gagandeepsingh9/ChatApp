@@ -1,0 +1,40 @@
+kind: Deployment
+apiVersion: apps/v1
+
+metadata:
+  name: chatapp-deployment
+  namespace: chatapp
+  
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chatapp
+  template:
+    metadata:
+      name: chatapp-pod
+      namespace: chatapp
+      labels:
+        app: chatapp
+    spec:
+      containers:
+        - name: chatapp-container
+          image: mrsinghdocker/chatapp:k8s 
+          ports:
+          - containerPort: 8080
+          env:
+          - name: SPRING_DATASOURCE_URL
+            value: "jdbc:mysql://mysql-svc:3306/chatapp?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+          
+          - name: SPRING_DATASOURCE_USERNAME
+            valueFrom:
+              configMapKeyRef:
+                name: mysql-configmap
+                key: mysql_user
+          
+          - name: SPRING_DATASOURCE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mysql-secret
+                key: password
+
