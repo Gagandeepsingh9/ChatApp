@@ -6,9 +6,12 @@ metadata:
   namespace: chatapp
 
 spec:
+  clusterIP: None
   selector:
     app: mysql
   ports:
-    - protocol: TCP
-      port: 3306
-      targetPort: 3306
+    - port: 3306
+      name: mysql-port
+
+#this is a headless service because there is no ip address allocated for the group of pods
+#chatapp application pods will reach to these mysql pods directly through the domain names 
