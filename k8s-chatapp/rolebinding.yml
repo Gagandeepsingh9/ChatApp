@@ -1,0 +1,14 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: chatapp-admin-rb
+  namespace: chatapp
+
+roleRef:
+  kind: Role
+  name: chatapp-admin
+
+subjects:
+- kind: ServiceAccount
+  name: chatapp-sa
+  namespace: chatapp

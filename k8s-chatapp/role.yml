@@ -1,0 +1,12 @@
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+
+metadata:
+  namespace: chatapp
+  name: chatapp-admin
+
+rules:
+  - apiGroups: ["","networking.k8s.io","apps","batch","rbac.authorization.k8s.io"] 
+    resources: ["pods","services","ingresses","deployments","configmaps"]
+    verbs: ["get","watch","list","create","update"]
+

@@ -1,0 +1,66 @@
+kind: Deployment
+apiVersion: apps/v1
+
+metadata:
+  name: chatapp-deployment
+  namespace: chatapp
+  
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chatapp
+  template:
+    metadata:
+      name: chatapp-pod
+      namespace: chatapp
+      labels:
+        app: chatapp
+    spec:
+      containers:
+        - name: chatapp-container
+          image: mrsinghdocker/chatapp:k8s 
+          ports:
+          - containerPort: 8080
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+
+            limits:
+              cpu: 200m
+              memory: 512Mi
+          env:
+          - name: SPRING_DATASOURCE_URL
+            value: "jdbc:mysql://mysql-svc:3306/chatapp?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
+          
+          - name: SPRING_DATASOURCE_USERNAME
+            valueFrom:
+              configMapKeyRef:
+                name: mysql-configmap
+                key: mysql_user
+          
+          - name: SPRING_DATASOURCE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mysql-secret
+                key: password
+          startupProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 120
+            periodSeconds: 15
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8080
+            initialDelaySeconds: 25
+            periodSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /login
+              port: 8080
+            initialDelaySeconds: 25
+            periodSeconds: 15
+
