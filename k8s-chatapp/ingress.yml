@@ -8,8 +8,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 
 spec:
+  ingressClassName: nginx
   rules:
-  - http:
+  - host: 43.204.37.223.nip.io
+    http:
       paths:
       - path: /
         pathType: Prefix
