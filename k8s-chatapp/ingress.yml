@@ -5,12 +5,15 @@ metadata:
   name: chatapp-ingress
   namespace: chatapp
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    annotations:
+    nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/affinity: "cookie"
 
 spec:
   ingressClassName: nginx
   rules:
-  - host: 43.204.37.223.nip.io
+  - host: 13.127.142.87.nip.io   
     http:
       paths:
       - path: /
