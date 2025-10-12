@@ -63,4 +63,10 @@ spec:
               port: 8080
             initialDelaySeconds: 25
             periodSeconds: 15
+      tolerations:
+      - key: "prd"
+        operator: "Equal"
+        value: "true"
+        effect: "NoSchedule"
+        
 
